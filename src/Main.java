@@ -12,7 +12,7 @@ public class Main {
     }
 
     public static void main(String[] args){
-        String txt = "Qual tipo de cliente? \n1) Físico \n2) - Jurídico)";
+        String txt = "Qual tipo de cliente? \n1) Físico \n2) - Jurídico";
         int tipoCliente = Integer.parseInt(JOptionPane.showInputDialog(txt));
         Cliente client = null;
         String nome = JOptionPane.showInputDialog("Nome do cliente: ");
