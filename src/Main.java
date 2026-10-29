@@ -20,7 +20,7 @@ public class Main {
             client = new Fisico(nome, cpf);
         }   else {
                 String cnpj = JOptionPane.showInputDialog("CNPJ:");
-                client = new Fisico(nome, cnpj);
+                client = new Juridico(nome, cnpj);
         }
 
 
@@ -31,17 +31,18 @@ public class Main {
         int op = -1;
 
         while (op != 0){
+            op = menu();
             switch (op){
                 case 1:
                     String msg = "Saldo: " + c1.getSaldo();
                     JOptionPane.showMessageDialog(null, msg);
                     break;
                 case 2:
-                    String sValorD = "Valor a depositar: ";
+                    String sValorD = JOptionPane.showInputDialog("Valor a depositar: ");
                     c1.depositar(Double.parseDouble(sValorD));
                     break;
                 case 3:
-                    String sValorS = "Valor a depositar: ";
+                    String sValorS = JOptionPane.showInputDialog("Valor a sacar: ");
                     c1.sacar(Double.parseDouble(sValorS));
                     break;
                 case 0:
