@@ -16,4 +16,7 @@ public abstract class Cliente {
                 "Telefone: " + fone;
 
     }
+
+
+    public abstract void cadastrar();
 }
