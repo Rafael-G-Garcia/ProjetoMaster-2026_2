@@ -21,8 +21,15 @@ public class Main {
         }
         client.cadastrar();
 
+        txt = "Qual tipo de conta? \n1) Poupança \n2) Corrente";
+        int tipoConta = Integer.parseInt(JOptionPane.showInputDialog(txt));
 
-        Conta c1 = new Conta();
+        Conta c1 = null;
+        if (tipoConta == 1){
+            c1 = new Poupanca();
+        } else {
+            c1 = new Corrente();
+        }
         c1.titular = client;
 
         int op = -1;
